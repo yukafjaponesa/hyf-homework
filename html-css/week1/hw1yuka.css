@@ -1,0 +1,23 @@
+.all {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+
+.pic {
+  float: right;
+}
+
+
+#box {
+background-color: #cfc;
+padding: 10px;
+border: 1px;
+solid: green;
+outline: none;
+}
