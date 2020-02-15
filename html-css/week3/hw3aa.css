@@ -1,0 +1,86 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #F0FFFF;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.first-name, .last-name, .street-address, .post-code {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.country {
+  margin-bottom: 5%;
+}
+
+.address{
+  margin-bottom: 5%;
+}
+
+.prof-discri {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+}
+
+.billing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20%;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.shipping {
+  margin-bottom: 5%;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 600px) {
+  .flex-container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .name {
+    flex-direction: row;
+  }
+
+  .first-name, .last-name, .street-address, .post-code {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .last-name, .post-code {
+    margin-left: 10%;
+  }
+
+  .address {
+    flex-direction: row;
+  }
+
+  .prof-descri {
+    display: flex;
+    flex-direction: row;
+  }
+}
