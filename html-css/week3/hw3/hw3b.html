@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw3 b</title>
+<link rel="stylesheet" type="text/css" href="hw3b.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <div class="flex-container">
+      <div class="title">
+        <h2>Sign up to yourcustomtailor.com</h2>
+      </div> <!-- end of title -->
+
+      <div>
+        <h3>Step 2/4 - How can we reach you?</h3>
+      </div>
+
+    <div class="w3-container">
+      Progress
+      <div class="w3-border">
+        <div class="w3-grey"
+          style="height:24px;
+          width:50%"
+        >
+        </div> <!-- end of w3-grey -->
+      </div> <!-- w3-border -->
+
+
+
+      <div>
+        <p>We will probably need to stay in touch somehow. Let us know how we can reach you?</p>
+      </div> <!-- end of we will probably -->
+
+    <form>
+      <div class="fills">
+      <div class="phone">
+        <label for="phone">Phone</label>
+        <input
+        class="telphone"
+        type="tel"
+        name="phone"
+        id="phone"
+        />
+      </div> <!-- end of phone-->
+
+        <div class="email-pass">
+          <div class="email-address">
+          <label for="email">Email* </label>
+          <input
+            class="email"
+            name="email"
+            id="email"
+            type="email"
+            placeholder=""
+            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+            required
+          />
+          </div> <!-- end of email-address -->
+
+      <div class="pass">
+        <div class="first-pass">
+          <label for="password">Password*</label>
+          <input
+            class="passbox"
+            type="password"
+            name="password"
+            id="password"
+            placeholder=""
+            minlength="10"
+            pattern="(?=.*[a-z])(?=.*[A-Z])"
+          /> <!-- Pattern: This is called regex (regular expressions) -->
+        </div> <!-- first-pass -->
+
+        <div class="first-pass">
+          <label for="re-password">Re-enter Password*</label>
+          <input
+            class="passbox"
+            type="password"
+            name="re-password"
+            id="re-password"
+            placeholder=""
+            minlength="10"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+        </div> <!-- first-pass -->
+      </div> <!-- end of pass -->
+    </div> <!-- end of email-phone -->
+    </div> <!-- end of fills -->
+      <p>I want to sign up for the newsletter</p>
+
+      <div class="news">
+        <div class="weekly">
+          <input
+            type="radio"
+            value="weekly"
+            name="newsletter"
+            id="weekly"
+            checked
+          />
+          <label for="weekly">Weekely news</label>
+        </div> <!-- end of weekly -->
+
+        <div class="monthly">
+        <input
+          type="radio"
+          value="monthly"
+          name="newsletter"
+          id="monthly"
+        />
+        <label for="monthly">Monthly news</label>
+        </div> <!-- end of monthly -->
+
+        <div class="no">
+        <input
+          type="radio"
+          value="no"
+          name="newsletter"
+          id="no"
+        />
+        <label for="no">Don't send me news</label>
+        </div> <!-- end of no -->
+      </div> <!-- end of news -->
+
+      <div class="button">
+        <a href="file:///D:/WIN7-%E7%94%B1%E9%A6%99/fukuzawa%20yuka/hackyourfuture/0902class3/hw3/hw3c.html" target="_blank">
+          <input
+            type="submit"
+            value="Next step"
+            >
+          </input>
+        </a>
+        </button>
+      </div> <!-- end of button -->
+    </form>
+    </div> <!-- flex-container -->
+    </div> <!-- w3-container -->
+
+</body>
+</html>

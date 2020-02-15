@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw3 d</title>
+<link rel="stylesheet" type="text/css" href="hw3d.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="title">
+      <h2>Sign up to yourcustomtailor.com</h2>
+    </div> <!-- end of title -->
+
+    <div>
+      <h3>Step 4/4 - Payment</h3>
+    </div>
+
+    <div class="w3-container">
+    Progress
+    <div class="w3-border">
+      <div class="w3-grey"
+        style="height:24px;
+        width:100%"
+      >
+      </div> <!-- end of w3-grey -->
+    </div> <!-- w3-border -->
+
+    <div>
+      <p>Please fill in your payment data</p>
+    </div> <!-- end of what kind of items -->
+
+    <form>
+      <div class="name-on-card">
+        <label for="name-on-card">Name on card</label>
+        <input
+          type="text"
+          name="name-on-card"
+          id="name-on-card"
+          placeholder=""
+        />
+      </div> <!-- end of name-on-card -->
+
+      <div class="card-type">
+        Card type
+        <select name="card">
+          <option value="">--Select--</option>
+          <option value="visa/master">Visa/Master</option>
+          <option value="debit">Debit</option>
+        </select>
+      </div> <!-- end of card-type -->
+
+      <div class="cardnum">
+        <label for="num">Credit card number</label>
+        <input
+          type="text"
+          name="num"
+          id="num"
+          placeholder=""
+          minlength="16"
+          maxlength="16"
+        />
+      </div> <!-- end of cardnum -->
+
+      <div class="name">
+        <label for="name">First name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder=""
+        />
+      </div> <!-- end of name -->
+
+      <div class="expiry">
+        <label for="month">Expiry month</label>
+        <input
+          class="month"
+          type="text"
+          name="month"
+          id="month"
+          placeholder=""
+          minlength="2"
+          maxlength="2"
+        />
+
+        <label for="year">Expiry year</label>
+        <input
+          class="year"
+          type="text"
+          name="year"
+          id="year"
+          placeholder=""
+          minlength="2"
+          maxlength="2"
+        />
+      </div> <!-- end of expiry -->
+
+      <label for="ccv">CCV</label>
+      <input
+        class="ccv"
+        type="text"
+        name="ccv"
+        id="ccv"
+        placeholder=""
+        minlength="3"
+        maxlength="3"
+      />
+
+      <div class="button">
+        <button button="submit">
+          Next step
+        </button>
+      </div> <!-- end of button -->
+    </form>
+  </div> <!-- end of flex-container -->
+  </div> <!-- w3-container -->
+
+</body>
+</html>

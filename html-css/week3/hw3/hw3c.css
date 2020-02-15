@@ -1,0 +1,64 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #F0FFFF;
+}
+
+.check {
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+  width: 40%;
+  text-align: right;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+  text-align: right;
+}
+
+.selections {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selections > .select{
+  flex: 1 1 50%;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 600px) {
+  .all, .flex-container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .selections {
+    flex-wrap: no-wrap;
+  }
+
+  .selections > .select{
+    flex: 1 1 25%;
+  }
+}

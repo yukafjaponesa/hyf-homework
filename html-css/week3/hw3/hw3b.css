@@ -1,0 +1,102 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #F0FFFF;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.email-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.email-pass {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.email, .passbox, .telphone {
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+.pass {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-pass {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 600px) {
+  .all, .flex-container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+.fills {
+  display: flex;
+  flex-direction: row;
+}
+
+  .phone {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    order: 1;
+    height: 15%;
+  }
+
+  .email-address {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .email {
+    width: 50%
+  }
+
+  .first-pass {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+  }
+
+   .passbox {
+     width: 30%;
+   }
+
+   .news {
+     display: flex;
+     flex-direction: row;
+   }
+
+   .weekly, .monthly, .no {
+     margin-right: 5%;
+   }
+
+}
