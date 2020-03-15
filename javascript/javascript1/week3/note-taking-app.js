@@ -1,32 +1,42 @@
 const notes = [];
 
-function addNote(content, id) {
-  const day1 = [{
-    content: "meeting",
-    id: 1
-  },
-{
-    content: "business dinner",
-    id: 2
-}
-]
-  notes.push()
+function addNote(memo) {
+  notes.push(memo)
 };
-let a = addNote(); //save a note
+
+addNote({
+  content: "meeting",
+    id: 1
+});
+addNote({
+  content: "business dinner",
+    id: 2
+}); //save a note
+console.log(notes);
+
 
 function getNoteFromId(id) {
-  for (let i = 0; i < id.length; i++)
-  if (id === number) {
-    return id
-  } else {
-    "id should be number/ id does not match"
-  }
+  for (let i = 0; i < notes.length; i++){
+  if (id === notes[i].id) {
+    return notes[i].content //should return id object
+  }}
+  return "id should be number/ id does not match"
 };
-let b = getNoteFromId(); //get a note
+let b = getNoteFromId(1); //get a note
+console.log(b); //get 0ll notes
 
-console.log(notes); //get all notes
+
+function getAllNote() {
+  return notes
+};
+let c = getAllNote();
+console.log(c);
+
 
 function logOutNotesFormatted() {
-  get notes
-  return "The note with id: 1, has the following note text: "some example note"
+  return notes
+  return "The note with " + id + ", has the following note text: " + content
 };
+
+const logOut = logOutNotesFormatted();
+console.log(logOut);
