@@ -71,19 +71,21 @@ function rating(number) {
     console.log(higherThan6);
 
 //6. how to contain any specific items in it
-function howManyMovies (itm) {
-  if(itm.includes("Surfer") || itm.includes("Alien") || itm.includes("Benjamin")){
-    return itm.length;
-  }
-};
-let howmany = movies.filter(howManyMovies);
-console.log(howmany);
+// function howManyMovies (itm) {
+//   if(itm.includes("Surfer") || itm.includes("Alien") || itm.includes("Benjamin")){
+//     return itm.length;
+//   }
+// };
+// let howmany = movies.filter(howManyMovies);
+// console.log(howmany);
 //i = case insensitive (if needed)
 //Question: how to turn forEach into map and how to conole
 
+const includesLove = movies.filter(movie => movie.title.includes('love'));
+console.log(includesLove);
 //7.make an new array with duplicated word in titles
-const lookup = moveis.reduce((a, e) => {
-  a[e.title] = ++a[e.title] || "Wars";
-  return a;
-}, {});
-console.log(movies.filter(e => lookup[e.title]));
+// const lookup = moveis.reduce((a, e) => {
+//   a[e.title] = ++a[e.title] || "Wars";
+//   return a;
+// }, {});
+// console.log(movies.filter(e => lookup[e.title]));
