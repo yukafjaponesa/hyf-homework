@@ -1,0 +1,5 @@
+section {
+  border: 6px solid #ffcc5c;
+  display: flex;
+  flex-direction : row;
+}
