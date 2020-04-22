@@ -76,3 +76,5 @@ function addSongToMyPlaylist(title) {
 
 const myPlaylist = addSongToMyPlaylist("Blacker than black");
 console.log(myPlaylist);
+
+console.log(myPlaylist);
