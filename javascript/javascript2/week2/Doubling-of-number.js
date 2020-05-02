@@ -9,8 +9,8 @@ let newNumbers = [];
 
 //console.log("The doubled numbers are", newNumbers); // [2, 6]
 function doubledNum(num) {
-  if(numbers % 2 !== 0){
-    newNumbers = numbers * 2;
+  if(num % 2 !== 0){
+    newNumbers = num * 2;
   }
 };
 const mapNum = numbers.map(doubledNum);

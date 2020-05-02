@@ -1,11 +1,13 @@
 function degrees (tempurature) {
-  let a = "Wear T-shirts"
-  let b = "Wear sweater"
+  const tshirt = "Wear T-shirts"
+  const sweater = "Wear sweater"
   if (tempurature > 18) {
-    return a
+    return tshirt
   } else {
-    return b //after calling return, there will be nothing to continue
+    return sweater //after calling return, there will be nothing to continue
   }
 };
-let a = degrees(19); // a will be what comes after retun.
-console.log(a);
+const whatsTheWeatherLike = degrees(19); // a will be what comes after retun.
+console.log(whatsTheWeatherLike);
+
+console.log(degrees(15));

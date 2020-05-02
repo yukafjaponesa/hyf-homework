@@ -1,6 +1,6 @@
 const testProductNames = window.getAvailableProducts();
 //const testProductNames = ['Flat screen', 'Mobile phone', 'Wallet'];
-const products = document.querySelector('.products');
+const products = document.querySelector('.products ul');
 console.log(testProductNames);
 const ul = document.createElement('ul');
 console.log(ul);
@@ -19,6 +19,11 @@ function renderProducts(products) {
   liInside.innerHTML += ' | ' + products[j].price
   liInside.innerHTML += ' | ' + products[j].rating
   liInside.innerHTML += ' | ' + products[j].shipsTo
+
+  const liInsidePrice = document.createElement('li');
+  liInsidePrice.innerHTML = products[i].price;
+  liInsidePrice.className = 'price';
+  ulInside.appendChild(liInsidePrice);
   ulInside.appendChild(liInside);
   }
 

@@ -25,7 +25,7 @@ if(numsLen % 2 === 0)//is even
 return median;
 };
 
-let a = mean(housePrices);
+//let a = mean(housePrices); not used
 console.log(mean(housePrices));
-let b = median(housePrices);
+//let b = median(housePrices); not used
 console.log(median(housePrices));

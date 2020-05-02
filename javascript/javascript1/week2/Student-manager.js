@@ -4,14 +4,14 @@ function addStudentToClass(studentName) {
     // You write code here
     // You can not add same person
     if (class07Students.includes(studentName)) {
-      console.log(studentName + ' is already in the class')
-      return
+      //console.log(studentName + ' is already in the class')
+      return `${studentName} is already in the class`;
     }
     if (studentName === "Queen" && class07Students.length >= 7) {
       //one of the name will be out and Queen should be added
       class07Students.pop()
       class07Students.push(studentName)
-      return
+      //return
     }
     // Check if there will be more than 7
     // people in the array (class)

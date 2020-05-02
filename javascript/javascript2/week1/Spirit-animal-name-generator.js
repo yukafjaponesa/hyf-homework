@@ -3,11 +3,11 @@ const secondAnimal= ["Dog", "Cat", "Hawk", "Hippo", "Wolf", "Beaver", "Horse", "
 
 function getName() {
   if(document.getElementById("name").value === "") {
-    document.getElementById("name").placeholder = "No name is typed";
+    document.getElementById("name").value = "No name is typed";
 } else {
     let randomItem = firstDrink[Math.floor(Math.random()*firstDrink.length)];
     let randomAnimal = secondAnimal[Math.floor(Math.random()*secondAnimal.length)];
-    document.getElementById("animal-name").placeholder = document.getElementById("name").value + " - the "
+    document.getElementById("animal-name").value = document.getElementById("name").value + " - the "
     + randomItem + " " + randomAnimal;
 }
 };
