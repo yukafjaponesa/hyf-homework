@@ -1,18 +1,22 @@
-const api = "http://api.giphy.com/v1/gifs/search?";
-const apiKey = "&api_key=xaoGqJvlFyO1480AAIPRg1FecpwZETEq"
-const query = `&q=${query}`
-
-function getGif() {
-  const url = api + apiKey + query;
-  loadJSON(url, gotData);
+const getGiphy = () => {
+  const getWord = document.getElementById("word");
+  const query = getWord.value;
+  const url = `http://api.giphy.com/v1/gifs/search?&api_key=xaoGqJvlFyO1480AAIPRg1FecpwZETEq&q=${query}&limit=25&offset=0&rating=G&lang=en`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((result) => {
+      console.log(result)
+      const gifData = result.data;
+      let gifImg = gifData.map((m) => {
+        return m.images.downsized_medium.url;
+      });
+      gifImg.forEach((imgUrl) => {
+        const gifImgTag = document.createElement("img");
+        const divContainer = document.getElementById("result");
+        divContainer.appendChild(gifImgTag);
+        gifImgTag.setAttribute("src", imgUrl);
+      });
+    });
 };
-
-function gotData(data) {
-  for(i = 0; i < data.length; i++)
-  creatImg(data.data[i].images.original.url);
-};
-
-//const api = `http://api.giphy.com/v1/gifs/search?&api_key=xaoGqJvlFyO1480AAIPRg1FecpwZETEq&q=${query}`
-// document.getElementById('submit').onclick =() => {
-//   const word = document.getElementById('word');
-// };
+const searchBtn = document.getElementById("submit");
+searchBtn.addEventListener("click", getGiphy);
