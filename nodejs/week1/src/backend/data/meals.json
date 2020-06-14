@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Indian food in the summer",
+    "maxNumberOfGuests": 5,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2019/12/7 14:34",
+    "price": 67
+  },
+  {
+    "id": 2,
+    "title": "Italian food with best ingredients",
+    "maxNumberOfGuests": 10,
+    "description": "All ingredients from Italy freshly cooked",
+    "createdAt": "2019/12/15 15:30",
+    "price": 65
+  },
+  {
+    "id": 3,
+    "title": "Japanese food by Japanese chef",
+    "maxNumberOfGuests": 4,
+    "description": "A trip to Japan",
+    "createdAt": "2019/11/13 10:00",
+    "price": 100
+  },
+  {
+    "id": 4,
+    "title": "Danish smoere brot",
+    "maxNumberOfGuests": 6,
+    "description": "Taste the Danish cusine",
+    "createdAt": "2019/12/8 09:26",
+    "price": 70
+  },
+  {
+    "id": 5,
+    "title": "Spanish tapas",
+    "maxNumberOfGuests": 8,
+    "description": "Fiesta con tus amigos",
+    "createdAt": "2019/12/9 16:08",
+    "price": 85
+  }
+]
