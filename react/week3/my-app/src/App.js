@@ -11,7 +11,8 @@ class App extends React.Component {
             todos: todosData,
             //setTodos: todosData,
             newItem: "",
-            deadline: ""
+            deadline: "",
+            editing: false
         }
 
         // const [todos, setTodos] = useState(todosDatas);
@@ -22,6 +23,10 @@ class App extends React.Component {
         this.addTodo = this.addTodo.bind(this)
         this.updateInput = this.updateInput.bind(this)
         this.deleteItem = this.deleteItem.bind(this)
+        this.updateItem = this.updateItem.bind(this)
+        this.updateDeadline = this.updateDeadline.bind(this)
+        this.updateInputDeadline = this.updateInputDeadline.bind(this)
+        this.editItem = this.editItem.bind(this)
     }
 
     handleChange(id) {
@@ -38,29 +43,22 @@ class App extends React.Component {
     }
 
     addTodo(e) {
+      //console.log("add todo");
       e.preventDefault();
       const newTodo = {
         id: this.state.todos.length + 1,
         text: this.state.newItem,  // text should match with the input box
         completed: false,
-        date: this.state.deadline
+        deadline: this.state.deadline
       }
-      //const newTodo = this.state.todos;
       const newTodos = this.state.todos.concat([newTodo]);
       this.setState({
         todos: newTodos
       })
     }
 
-    updateInput(value, id) { //original key, value
-    //  const items = this.state.todos;
-      // items.map(item => {
-      //   if(item.id === id) {
-      //     item.text=text;
-      //   }
-      // })
-
-      this.setState((prevState) => {
+    updateInput(value, id) {
+        this.setState((prevState) => {
         const updatedTodos = prevState.todos.map((todo) => {
           if(todo.id === id) {
             return {...todo, text: value}
@@ -70,11 +68,33 @@ class App extends React.Component {
         })
         return {todos: updatedTodos}
       })
+    }
 
-      // this.setState({
-      //   newItem: value
-      // })
-      // console.log(value);
+    updateInputDeadline(value, id) {
+      //console.log(value, id);
+        this.setState((prevState) => {
+        const updatedTodos = prevState.todos.map((todo) => {
+          if(todo.id === id) {
+            console.log(value, id);
+            return {...todo, deadline: value}
+          }else {
+            return todo;
+          }
+        })
+        return {todos: updatedTodos}
+      })
+    }
+
+    updateItem(e) {
+      this.setState({
+        newItem: e.target.value
+      })
+    }
+
+    updateDeadline(e) {
+      this.setState({
+        deadline: e.target.value
+      })
     }
 
     deleteItem(id){
@@ -84,12 +104,14 @@ class App extends React.Component {
       this.setState({
       todos: filteredItems
     })
-    // if(todoItems === 0){
-    //   this.setState({
-    //     tpdps: "No items"
-    //   })
-    // }
   }
+
+  editItem(id) {
+    this.setState({
+      editing: id
+    })
+  }
+
 
 
     render() {
@@ -102,7 +124,11 @@ class App extends React.Component {
           addTodo={this.addTodo}
           deleteItem={this.deleteItem}
           updateInput={this.updateInput}
+          updateInputDeadline={this.updateInputDeadline}
+          isEdited={this.state.editing === item.id}
+          editItem={this.editItem}
         />)
+
 
         return (
           <div className="todo-list">
@@ -114,25 +140,26 @@ class App extends React.Component {
                 type="text"
                 placeholder="Type item here..."
                 value={this.state.newItem}
-                onChange={e => this.updateInput(e.target.value)}
+                onChange={this.updateItem}
               />
             </div>
 
             <div className="date">
-              <label for="deadline">Deadline</label>
+              <label htmlFor="deadline">Deadline</label>
               <input
                 type="date" id="start" name="deadline"
-                // value="2020-01-01"
                 min="2020-01-01"
                 max="2020-12-31"
                 value={this.state.deadline}
-                onChange={e => this.updateInput(e.target.value)}
+                onChange={this.updateDeadline}
               />
             </div>
 
             <button onClick={this.addTodo}>Add to the list</button>
 
-              {todoItems}
+            {todoItems.length === 0 ? <p>No items</p> : null}
+
+            {todoItems}
 
           </div>
         )
@@ -140,9 +167,3 @@ class App extends React.Component {
 }
 
 export default App
-
-// <input
-//   type="text"
-//   id={item.id}
-//   value={todoItems}
-// />
