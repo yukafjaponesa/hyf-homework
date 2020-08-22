@@ -2,6 +2,7 @@ import React from "react"
 import TodoItem from "./components/TodoItem"
 import todosData from "./components/todosData"
 import Timer from "./components/Timer"
+import FlipMove from "react-flip-move"
 
 
 class App extends React.Component {
@@ -159,7 +160,9 @@ class App extends React.Component {
 
             {todoItems.length === 0 ? <p>No items</p> : null}
 
-            {todoItems}
+            <div className="todoitems">
+              {todoItems}
+            </div>
 
           </div>
         )
