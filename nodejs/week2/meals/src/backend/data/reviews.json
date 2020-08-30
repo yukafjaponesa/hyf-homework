@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "numberOfStars": 3,
+    "content": "Best meal ever",
+    "mealId": 1,
+    "createdAt": 12345
+  },
+  {
+    "id": 2,
+    "numberOfStars": 3,
+    "content": "Italian is always good",
+    "mealId": 2,
+    "createdAt": 12346
+  },
+  {
+    "id": 3,
+    "numberOfStars": 5,
+    "content": "Taste the real Japanese food",
+    "mealId": 3,
+    "createdAt": 12347
+  },
+  {
+    "id": 4,
+    "numberOfStars": 4,
+    "content": "Smoked salmon is the best choice",
+    "mealId": 4,
+    "createdAt": 12348
+  },
+  {
+    "id": 5,
+    "numberOfStars": 4,
+    "content": "Que rico!",
+    "mealId": 5,
+    "createdAt": 12349
+  }
+]
