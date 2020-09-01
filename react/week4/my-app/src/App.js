@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import {About} from "./components/About";
 import {Home} from "./components/Home";
-import {Users} from "./components/Users";
+import Users from "./components/Users";
+
 
 export default function App() {
   return(
@@ -32,11 +33,10 @@ export default function App() {
             <About />
           </Route>
           <Route path="/users">
-            <Users />
+              <Users />
           </Route>
           <Route path="/">
             <Home />
-            <Nav />
           </Route>
         </Switch>
       </div>
