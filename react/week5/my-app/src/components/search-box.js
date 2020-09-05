@@ -14,7 +14,7 @@ const SearchBox = () => {
    = useContext(UsersContext);
 
   return(
-    <div>
+    <div className="App">
       <h1>Github user searcher</h1>
       <input
         type="text"

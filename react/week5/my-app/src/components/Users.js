@@ -1,5 +1,4 @@
 import React, {useState, useEffect, createContext} from "react";
-//import './App.css';
 import UserDetails from "./UserDetails";
 import debounce from "lodash/debounce";
 
@@ -16,9 +15,11 @@ const UsersContextProvider = (props) => {
       return;
     }
 
+    setLoading(true);
+
     const getUsers = debounce(() => {
       console.log("debounce")
-      fetch(`https://api.github.com/search/users?q=${search}`
+      fetch(`https://api.github.com/search/users?q=${encodeURIComponent(search)}` //when you set value in query param, use encode
         , {
         signal: abortController.signal,
       }
@@ -52,7 +53,9 @@ const UsersContextProvider = (props) => {
 // #3 start
   return (
     <UsersContext.Provider
-      value={{users, loading, search, setSearch}}>
+      className="App"
+      value={{users, loading, search, setSearch}}
+    >
       {props.children}
     </UsersContext.Provider>
    )

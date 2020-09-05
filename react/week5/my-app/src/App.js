@@ -14,7 +14,7 @@ import UserDetails from "./components/UserDetails";
 
 export default function App() {
   return(
-    <Router>
+    <Router className="App">
       <div>
         <nav>
           <ul>
