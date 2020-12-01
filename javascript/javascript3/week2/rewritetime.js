@@ -15,26 +15,18 @@ setTimeoutPromise(2)
   .catch(e => console.log('error'))
 
 
-// getCurrentLocation()
-//     .then((position) => {
-//         // called when the users position is found
-//         console.log(position);
-//     })
-//     .catch((error) => {
-//         // called if there was an error getting the users location
-//         console.log(error);
-//     });
 
-const getCurrentLocation = (location) => {
+const getCurrentLocation = () => {
     return new Promise((resolve, reject) => {
-      if(location) {
-        resolve(location)
-      }else {
-        reject(error);
-      }
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(resolve);
+        }
+        else {
+            reject('error')
+        }
     })
 }
 
-getCurrentLocation(true)
+getCurrentLocation()
   .then(position => console.log('right position'))
   .catch(e => console.log('position not available'))
