@@ -1,0 +1,15 @@
+body {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+
+#title {
+  text-align: center;
+}
+
+.headder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
