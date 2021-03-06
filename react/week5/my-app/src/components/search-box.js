@@ -2,7 +2,6 @@ import React, {useContext} from "react";
 import {UsersContext} from "./Users";
 import UserDetails from "./UserDetails";
 
-
 const SearchBox = () => {
   const {
     search,
@@ -17,6 +16,7 @@ const SearchBox = () => {
     <div className="App">
       <h1>Github user searcher</h1>
       <input
+        className="search-box"
         type="text"
         placeholder="Search"
         onChange={(e) => (setSearch(e.target.value))}
